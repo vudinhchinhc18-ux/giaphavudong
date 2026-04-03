@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Gia Phả Vũ Đông</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gia Phả Họ Mai Trình</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Roboto', system-ui, sans-serif; }
+        .generation { border-left: 3px solid #b45309; }
+        .member-card {
+            transition: all 0.3s;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+    </style>
 </head>
-<body>
-    <h1>Chào mừng đến Gia Phả Vũ Đông</h1>
-    <p>Website đang phát triển...</p>
+<body class="bg-orange-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-orange-700 text-white py-4 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <i class="fas fa-users text-4xl"></i>
+                <div>
+                    <h1 class="text-3xl font-bold">Gia Phả Họ Mai</h1>
+                    <p class="text-orange-200 text-sm">Họ Mai Trình - Truyền thống - Đoàn kết - Phát triển</p>
+                </div>
+            </div>
+            <nav class="flex gap-6 text-lg">
+                <a href="#" class="hover:text-orange-200 transition">Trang chủ</a>
+                <a href="#" class="hover:text-orange-200 transition">Sơ đồ gia phả</a>
+                <a href="#" class="hover:text-orange-200 transition">Danh sách thành viên</a>
+                <a href="#" class="hover:text-orange-200 transition">Tiểu sử</a>
+                <a href="#" class="hover:text-orange-200 transition">Tin tức</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- Hero -->
+        <div class="bg-white rounded-2xl shadow p-8 mb-10 text-center">
+            <h2 class="text-4xl font-bold text-orange-800 mb-2">Gia Phả Họ Mai Trình</h2>
+            <p class="text-xl text-gray-600">Kỷ niệm các thế hệ tiên tổ • Kết nối con cháu muôn đời</p>
+        </div>
+
+        <!-- Cây gia phả đơn giản (demo) -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <i class="fas fa-sitemap text-orange-600"></i> 
+                Sơ đồ Gia Phả (Thế hệ gần đây)
+            </h3>
+            
+            <div class="space-y-8">
+                <!-- Thế hệ 1 -->
+                <div class="generation pl-6">
+                    <h4 class="font-bold text-lg mb-3 text-orange-700">Thế hệ 1 - Tổ tiên</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="member-card bg-white border border-orange-200 rounded-xl p-5 text-center">
+                            <img src="https://via.placeholder.com/150" class="w-24 h-24 mx-auto rounded-full object-cover mb-3" alt="">
+                            <p class="font-bold">Mai Văn Trình</p>
+                            <p class="text-sm text-gray-500">1920 - 1995</p>
+                            <p class="text-xs mt-2 text-orange-600">Tổ phụ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thế hệ 2 -->
+                <div class="generation pl-6">
+                    <h4 class="font-bold text-lg mb-3 text-orange-700">Thế hệ 2</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="member-card bg-white border border-orange-200 rounded-xl p-5 text-center">
+                            <img src="https://via.placeholder.com/150" class="w-20 h-20 mx-auto rounded-full mb-3" alt="">
+                            <p class="font-semibold">Mai Thị Lan</p>
+                            <p class="text-xs text-gray-500">Con gái trưởng</p>
+                        </div>
+                        <div class="member-card bg-white border border-orange-200 rounded-xl p-5 text-center">
+                            <img src="https://via.placeholder.com/150" class="w-20 h-20 mx-auto rounded-full mb-3" alt="">
+                            <p class="font-semibold">Mai Văn Hải</p>
+                            <p class="text-xs text-gray-500">Con trai thứ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danh sách thành viên -->
+        <div>
+            <h3 class="text-2xl font-bold mb-6">Danh sách thành viên</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Thẻ thành viên lặp lại -->
+                <div class="member-card bg-white rounded-2xl overflow-hidden shadow">
+                    <div class="h-2 bg-orange-600"></div>
+                    <div class="p-6 text-center">
+                        <img src="https://via.placeholder.com/150" class="w-28 h-28 mx-auto rounded-full border-4 border-orange-100" alt="">
+                        <h4 class="mt-4 font-bold text-xl">Mai Văn An</h4>
+                        <p class="text-gray-500">Sinh năm 1985</p>
+                        <p class="text-sm mt-2">Con trai của Mai Văn Hải</p>
+                        <button onclick="alert('Xem chi tiết Mai Văn An')" 
+                                class="mt-4 w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg text-sm font-medium">
+                            Xem chi tiết
+                        </button>
+                    </div>
+                </div>
+                <!-- Copy thẻ trên để thêm nhiều thành viên -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-orange-900 text-orange-200 py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2026 Gia Phả Họ Mai Trình - All Rights Reserved</p>
+            <p class="text-sm mt-2">Được phát triển bởi con cháu Họ Mai</p>
+        </div>
+    </footer>
+
 </body>
 </html>
